@@ -1,3 +1,14 @@
+<!--
+  IMPORTANT NOTE
+  ==============
+  
+  Make sure that the first character of this file is the character which starts
+  this comment! Some editors might place some other characters before this first
+  character, and these characters may be non-printable characters. This might
+  cause problems when a program attempts to read and load this file. A tool such
+  
+  -->
+
 <?xml version="1.0" encoding="utf-8"?>
 
 
