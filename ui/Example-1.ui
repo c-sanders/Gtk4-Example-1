@@ -4,9 +4,10 @@
   
   Make sure that the first character of this file is the character which starts
   this comment! Some editors might place some other characters before this first
-  character, and these characters may be non-printable characters. This might
-  cause problems when a program attempts to read and load this file. A tool such
-  
+  character, and these characters may or may not be non-printable characters.
+  These additional characters might cause problems when a program attempts to
+  read and load this file. A tool such as the Helix Visual Merge tool by
+  Perforce Software may show if extra characters have been added by an editor.
   -->
 
 <?xml version="1.0" encoding="utf-8"?>
