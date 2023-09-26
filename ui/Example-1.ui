@@ -2,13 +2,14 @@
   IMPORTANT NOTE
   ==============
   
-  Make sure that the first character of this file is the character which starts
-  this comment! Some editors might place additional characters before this first
-  character and these additional characters may or may not be non-printable
-  characters. Furthermore, these additional characters might cause problems when
-  a program attempts to read and load this file. A tool such as the Helix Visual
-  Merge tool by Perforce Software may show if such extra characters have been
-  added by an editor.
+  Make sure that the first character of this file is the first character which
+  starts this comment! The reason for mentioning this, is because some editors
+  might insert additional characters before this first character, and these
+  additional characters may or may not be non-printable. The presence of any
+  such additional characters will cause problems when a program attempts to read
+  and load this file into the program's Builder object. A tool such as the Helix
+  Visual Merge tool by Perforce Software, may show if such additional characters
+  have been added to this file by an editor.
   -->
 
 <?xml version="1.0" encoding="utf-8"?>
