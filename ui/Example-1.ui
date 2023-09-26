@@ -11,7 +11,7 @@
   which is generated should be similar to the following;
   
   (Example-1.exe:12884): Gtk-ERROR **: 10:28:01.841: failed to add UI from file
-  ..\ui\Example-1.ui: Error on line 17 char 2: Document must begin with an
+  ..\ui\Example-1.ui: Error on line 1 char 1: Document must begin with an
   element (e.g. <book>)
   
   A tool such as the Helix Visual Merge tool by Perforce Software, may show if
@@ -20,7 +20,6 @@
 
 
 <?xml version="1.0" encoding="utf-8"?>
-
 
 <interface>
   <requires lib="gtk" version="4.0"/>
