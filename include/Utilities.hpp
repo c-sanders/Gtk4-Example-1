@@ -7,7 +7,9 @@
 
 #include <gtk/gtk.h>
 
+#include <Settings.hpp>
 #include <Widgets.hpp>
+#include <UI_Utilities.hpp>
 #include <SignalHandlers.hpp>
 
 using std::cout;
@@ -41,6 +43,7 @@ namespace utilities
     );
 
 
+    /*
     int
     createAndConfigureMouseButtonEventController
     (
@@ -52,18 +55,7 @@ namespace utilities
      const
      string               eventType
     );
-
-
-    void
-    slot_mouseButtonAction
-    (
-     GtkApplication * app,
-     gpointer         user_data  // Does this value represent the number which
-                                 // corresponds to the mouse button which has been
-                                 // clicked, or does it represent the number of
-                                 // clicks which have been performed in a particular
-                                 // amount of time?
-    );
+     */
 
 
     void
