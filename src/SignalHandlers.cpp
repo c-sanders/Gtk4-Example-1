@@ -8,6 +8,11 @@ activate
  gpointer         user_data
 )
 {
+    const
+    string   nameFunction = "activate",
+             nF           = nameFunction + " : ";
+
+
     window_p = gtk_application_window_new(app_p);
 
     utilities::readUserInterfaceIntoBuilder();
@@ -18,7 +23,7 @@ activate
 
     utilities::configureMainWindow();
 
-    utilities::associateEventControllerWithWidgets();
+    utilities::associateEventControllerWithWidgets(nameFunction);
 
     // Set the main widget for the window. 
 

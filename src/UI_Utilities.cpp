@@ -19,6 +19,28 @@ utilities::associateWidgetsWithBuilderObjects
         )
     );
 
+    button_test_1_p
+    =
+    GTK_WIDGET
+    (
+        gtk_builder_get_object
+        (
+            const_cast<GtkBuilder*>(builder_p),
+            "button_test_1"
+        )
+    );
+
+    button_test_2_p
+    =
+    GTK_WIDGET
+    (
+        gtk_builder_get_object
+        (
+            const_cast<GtkBuilder*>(builder_p),
+            "button_test_2"
+        )
+    );
+
     button_quit_p
     =
     GTK_WIDGET
@@ -62,6 +84,8 @@ utilities::uiSpecificConnectSignalsToSlots
 int
 utilities::associateEventControllerWithWidgets
 (
+    const
+    string   nameInvokingFunction
 )
 {
     const
@@ -69,13 +93,16 @@ utilities::associateEventControllerWithWidgets
              nF           = nameFunction + " : ";
 
 
-    // Create a Controller and associate it with the Quit Button widget.
+    // Create a new Event Controller and associate it with the Quit Button
+    // widget.
     //
-    // This Controller should handle any right mouse button clicks which are
-    // performed on the Quit Button.
+    // This Event Controller should handle any right mouse button clicks which
+    // are performed on the Quit Button.
     //
     // Event Controllers refer to the action of clicking a button as "pressed"
     // not "clicked".
+
+    // >>> Create a new Evemt Controller.
 
     gesture_right_mouse_button_click_EventController_p
     =
@@ -84,8 +111,8 @@ utilities::associateEventControllerWithWidgets
         gtk_gesture_click_new()
     );
 
-    // >>>>>
-
+    // >>> Tell the Event Controller which events it should be looking out for.
+    //
     // Instruct the Event Controller to only capture right mouse button clicks.
     // The number 3 denotes the right mouse button.
 
@@ -99,15 +126,20 @@ utilities::associateEventControllerWithWidgets
 
     cout << nF << "Have associated a button with the Event Controller" << endl;
 
+    // >>> Assign a human-friendly name to the Event Controller.
+
     gtk_event_controller_set_name
     (
         gesture_right_mouse_button_click_EventController_p,
         "Right Mouse Button Click - Event Handler"
     );
 
+    // >>> Tell the Event Controller which GUI widget it should listen to for
+    //     events.
+
     gtk_widget_add_controller
     (
-        button_quit_p,
+        button_test_1_p,
         gesture_right_mouse_button_click_EventController_p
     );
 
