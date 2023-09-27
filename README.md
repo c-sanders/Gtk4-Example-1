@@ -1,7 +1,7 @@
 ## README.md file for project Gtk4 Example 1
 
 
-* #### Initialise a directory to hold a local copy of a repository
+#### - Initialise a directory to hold a local copy of a repository
 ```
   > git init
 ```
