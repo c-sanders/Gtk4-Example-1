@@ -9,7 +9,7 @@
 
 #### + Get help for a particular git command
 ```
-  > git <command> -h
+  > git <Name of command> -h
 ```
 Example;
 ```
@@ -25,10 +25,15 @@ Example;
 
 #### + Cloning a remote repository into a local directory
 ```
+  > git clone <URI of remote repository>
+```
+Example;
+```
   > git clone https://github.com/c-sanders/Gtk4-Example-1.git
 ```
-Note that this will create a sub-directory called ```Gtk4-Example-1``` and then
-clone the contents of the remote repository into this sub-directory.  
+Note that this will create a sub-directory called ```Gtk4-Example-1``` within
+the current working directory and then clone the contents of the remote
+repository into this sub-directory.  
 
 
 #### + Check the status of a local repository
