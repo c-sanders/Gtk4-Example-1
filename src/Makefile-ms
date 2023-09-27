@@ -198,7 +198,10 @@ lib_files_gnu=-L$(libdir_c) \
 Example_1_obj_files=Main.obj \
                     Widgets.obj \
                     Utilities.obj \
-                    SignalHandlers.obj
+                    SignalHandlers.obj \
+                    UI_Widgets.obj \
+                    UI_Utilities.obj \
+                    UI_SignalHandlers.obj
 
 link_flags_ms=$(lib_files_ms)
 
