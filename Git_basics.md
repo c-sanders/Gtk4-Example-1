@@ -1,10 +1,23 @@
 ## README.md file for project Gtk4 Example 1
 
 
+#### + Get help for git in general
+```
+  > git help
+```
+
+
+#### + Get help for a particular git command
+```
+  > git commit -h
+```
+
+
 #### + Initialise a directory to hold a local copy of a repository
 ```
   > git init
 ```
+
 
 #### + Cloning a remote repository into a local directory
 ```
