@@ -16,6 +16,8 @@ utilities
     int
     associateEventControllerWithWidgets
     (
+        const
+        string   nameInvokingFunction
     );
 
     int
