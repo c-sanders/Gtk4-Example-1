@@ -9,6 +9,10 @@
 
 #### + Get help for a particular git command
 ```
+  > git __command__ -h
+```
+Example;
+```
   > git commit -h
 ```
 
