@@ -18,12 +18,12 @@ using std::string;
 void
 slot_mouseButtonAction
 (
-    GtkGestureClick * app,
-    gpointer          user_data  // Does this value represent the number which
-                                 // corresponds to the mouse button which has been
-                                 // clicked, or does it represent the number of
-                                 // clicks which have been performed in a particular
-                                 // amount of time?
+    GtkEventController * emittingWidget_p,
+    gpointer             user_data  // Does this value represent the number which
+                                    // corresponds to the mouse button which has been
+                                    // clicked, or does it represent the number of
+                                    // clicks which have been performed in a particular
+                                    // amount of time?
 );
 
 

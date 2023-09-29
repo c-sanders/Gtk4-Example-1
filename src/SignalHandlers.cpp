@@ -23,7 +23,19 @@ activate
 
     utilities::configureMainWindow();
 
-    utilities::associateEventControllerWithWidgets(nameFunction);
+    // utilities::associateEventControllerWithWidgets(nameFunction);
+
+    /*
+    utilities::button_test_1_right_press
+    (
+        nameFunction
+    );
+     */
+
+    utilities::button_test_2_right_release
+    (
+        nameFunction
+    );
 
     // Set the main widget for the window. 
 
