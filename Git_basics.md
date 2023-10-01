@@ -61,6 +61,8 @@ In order to do this, the sequence of steps below need to be followed.
 ```
 
 #### + Commit changes, i.e. additions and removals of files, to the local repository
+Will this "stage" the changes, and make them ready and waiting to be pushed to
+the remote repository?
 ```
   > git commit -m "Commit comment."
 ```
