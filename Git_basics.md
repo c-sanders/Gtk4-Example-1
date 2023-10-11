@@ -84,10 +84,18 @@ To push the current branch and set the remote as upstream, use
 
 #### + Add a local file to a local repository
 ```
+  > git add <Name of file>
+```
+Example;
+```
   > git add Filename.cpp
 ```
 
 #### + Remove a file from a repository
+```
+  > git rm <Name of file>
+```
+Example;
 ```
   > git rm Filename.cpp
 ```
