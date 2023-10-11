@@ -77,6 +77,8 @@ To push the current branch and set the remote as upstream, use
     git push --set-upstream origin master
 ```
 
+![Image depicting Git branching.](../images/Git_branching_diagram.png)
+
 #### + Check the status of a local repository
 ```
   > git status
