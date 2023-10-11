@@ -36,14 +36,18 @@ the current working directory and then clone the contents of the remote
 repository into this sub-directory.  
 
 
-#### + Clone a GitHub repository into a local directory
+#### + Configure a local directory to be a copy of a GitHub repository
 In order to do this, the sequence of steps below need to be followed. 
 ```
   > git init
-  >
-  > git clone
-  >
+  > git add README.md
+  > git commit -m "Commit comment."
+  > git branch -M main
+  > git remote add origin https://github.com/c-sanders/GitHub-Repository.git
+  > git push -u origin main
 ```
+
+Note that the ```git branch``` command can be used to create, list, rename, and delete branches. It doesn't let you switch between branches or put a forked history back together again. For this reason, git branch is tightly integrated with the git checkout and git merge commands. 
 
 #### + Check the status of a local repository
 ```
