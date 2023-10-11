@@ -47,7 +47,7 @@ In order to do this, the sequence of steps below need to be followed.
   > git push -u origin main
 ```
 
-Note that the ```git branch``` command can be used to create, list, rename, and delete branches. It doesn't let you switch between branches or put a forked history back together again. For this reason, git branch is tightly integrated with the git checkout and git merge commands. 
+Note that the ```git branch``` command should be used to perform operations on branches. By operations, we mean such tasks as creating, listing, renaming, and deleting branches. This command doesn't let you switch between branches or put a forked history back together again. For this reason, git branch is tightly integrated with the git checkout and git merge commands. 
 
 #### + Check the status of a local repository
 ```
