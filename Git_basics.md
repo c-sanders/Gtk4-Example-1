@@ -47,7 +47,35 @@ In order to do this, the sequence of steps below need to be followed.
   > git push -u origin main
 ```
 
-Note that the ```git branch``` command should be used to perform operations on branches. By operations, we mean such tasks as creating, listing, renaming, and deleting branches. This command doesn't let you switch between branches or put a forked history back together again. For this reason, git branch is tightly integrated with the git checkout and git merge commands. 
+Note 1) : After the ```git init``` command has been executed as part of the above sequence, git will
+display the following messages;
+
+```
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint:   git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint:   git branch -m <name>
+Initialized empty Git repository in C:/Users/craig/Documents/GitHub/Javascript-Example-1/.git/
+```
+
+Note 2) : The ```git branch``` command is used to perform operations on branches.
+By operations, we mean such tasks as creating, listing, renaming, and deleting branches. This command doesn't let you switch between branches or put a forked history back together again. For this reason, git branch is tightly integrated with the git checkout and git merge commands. 
+
+Note 3) : If for whatever reason, you forget or neglect to set an upstream branch for your
+local directory, git will fail and display the following message;
+
+```
+fatal: The current branch master has no upstream branch.
+To push the current branch and set the remote as upstream, use
+
+    git push --set-upstream origin master
+```
 
 #### + Check the status of a local repository
 ```
