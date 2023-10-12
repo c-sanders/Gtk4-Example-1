@@ -22,6 +22,8 @@ Example;
   > git init
 ```
 
+This will create a hidden file called ```.git``` in the directory from which this command was invoked.
+This hidden file contains ...
 
 #### + Clone a remote repository into a local directory
 ```
@@ -118,10 +120,10 @@ Specific git-branch actions:
     --format <format>     format to use for the output
 ```
 
-#### + Not setting an upstream branch
+#### + Failing to set an upstream branch
 
-If for whatever reason, you forget or neglect to set an upstream branch for your
-local directory, git will fail and display the following message;
+If for whatever reason, you fail to set an upstream branch for your
+local directory, git will warn you about this fact and display the following message;
 
 ```
 fatal: The current branch master has no upstream branch.
