@@ -47,8 +47,8 @@ In order to do this, the sequence of steps below need to be followed.
   > git push -u origin main
 ```
 
-Note 1) : After the ```git init``` command has been executed as part of the above sequence, git will
-display the following messages;
+Note : After the ```git init``` command has been executed as part of the above sequence, git will
+display the following message;
 
 ```
 hint: Using 'master' as the name for the initial branch. This default branch name
@@ -61,13 +61,66 @@ hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
 hint: 'development'. The just-created branch can be renamed via this command:
 hint:
 hint:   git branch -m <name>
-Initialized empty Git repository in C:/Users/craig/Documents/GitHub/Javascript-Example-1/.git/
+Initialized empty Git repository in C:/Users/foo/GitHub/Gtk4-Example-1/.git/
 ```
 
-Note 2) : The ```git branch``` command is used to perform operations on branches.
-By operations, we mean such tasks as creating, listing, renaming, and deleting branches. This command doesn't let you switch between branches or put a forked history back together again. For this reason, git branch is tightly integrated with the git checkout and git merge commands. 
+#### + Dealing with branches
 
-Note 3) : If for whatever reason, you forget or neglect to set an upstream branch for your
+The ```git branch``` command was mentioned in the previous section. This command is used to perform various
+operations on branches such as creating, listing, renaming, and deleting branches. This command doesn't let
+you switch between branches or put a forked history back together again. For this reason, git branch is
+tightly integrated with the git checkout and git merge commands.
+
+The output from the ```git branch -h``` command looks as follows;
+
+```
+usage: git branch [<options>] [-r | -a] [--merged] [--no-merged]
+   or: git branch [<options>] [-l] [-f] <branch-name> [<start-point>]
+   or: git branch [<options>] [-r] (-d | -D) <branch-name>...
+   or: git branch [<options>] (-m | -M) [<old-branch>] <new-branch>
+   or: git branch [<options>] (-c | -C) [<old-branch>] <new-branch>
+   or: git branch [<options>] [-r | -a] [--points-at]
+   or: git branch [<options>] [-r | -a] [--format]
+
+Generic options
+    -v, --verbose         show hash and subject, give twice for upstream branch
+    -q, --quiet           suppress informational messages
+    -t, --track           set up tracking mode (see git-pull(1))
+    -u, --set-upstream-to <upstream>
+                          change the upstream info
+    --unset-upstream      unset the upstream info
+    --color[=<when>]      use colored output
+    -r, --remotes         act on remote-tracking branches
+    --contains <commit>   print only branches that contain the commit
+    --no-contains <commit>
+                          print only branches that don't contain the commit
+    --abbrev[=<n>]        use <n> digits to display object names
+
+Specific git-branch actions:
+    -a, --all             list both remote-tracking and local branches
+    -d, --delete          delete fully merged branch
+    -D                    delete branch (even if not merged)
+    -m, --move            move/rename a branch and its reflog
+    -M                    move/rename a branch, even if target exists
+    -c, --copy            copy a branch and its reflog
+    -C                    copy a branch, even if target exists
+    -l, --list            list branch names
+    --show-current        show current branch name
+    --create-reflog       create the branch's reflog
+    --edit-description    edit the description for the branch
+    -f, --force           force creation, move/rename, deletion
+    --merged <commit>     print only branches that are merged
+    --no-merged <commit>  print only branches that are not merged
+    --column[=<style>]    list branches in columns
+    --sort <key>          field name to sort on
+    --points-at <object>  print only branches of the object
+    -i, --ignore-case     sorting and filtering are case insensitive
+    --format <format>     format to use for the output
+```
+
+#### + Not setting an upstream branch
+
+If for whatever reason, you forget or neglect to set an upstream branch for your
 local directory, git will fail and display the following message;
 
 ```
@@ -77,7 +130,13 @@ To push the current branch and set the remote as upstream, use
     git push --set-upstream origin master
 ```
 
+Consider the following image.
+
 ![Image depicting Git branching.](./images/Git_branching_diagram.png)
+
+As you can see from the image, the green path represents the remote repository, while the blue path represents
+the local copy of this remote repository. The remote repository could very well be a repository which is hosted
+on GitHub. 
 
 #### + Check the status of a local repository
 ```
