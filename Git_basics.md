@@ -1,13 +1,13 @@
-## git basics
+## Git basics
 
 
-#### + Get help for git in general
+#### + Get help for Git in general
 ```
   > git help
 ```
 
 
-#### + Get help for a particular git command
+#### + Get help for a particular Git command
 ```
   > git <Name of command> -h
 ```
@@ -23,7 +23,7 @@ Example;
 ```
 
 This will create a hidden file called ```.git``` in the directory from which this command was invoked.
-This hidden file contains ...
+This hidden file contains the local version of the Git repository.
 
 #### + Clone a remote repository into a local directory
 ```
