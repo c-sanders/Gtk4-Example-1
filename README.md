@@ -1,15 +1,29 @@
 ## README.md file for project Gtk4 Example 1
 
 
+There are a number of tools which one can use to interact with Git or GitHub. Two of them
+are the Git command line interface (git) and the GitHub command line interface (gh). The 
+git utility allows you to work with both local and remote Git repositories - including Git
+repositories which are hosted on GitHub. The GitHub command line interface on the other hand,
+is specifically for working with GitHub.
+
+We will refer to both of these command line utilities here in this discussion
+
 #### - Initialise a directory to hold a local copy of a repository
 ```
   > git init
 ```
 
 * #### Cloning a remote repository into a local directory
-Example;
+
+Example using git;
 ```
   > git clone https://github.com/c-sanders/Gtk4-Example-1.git
+```
+
+Example using gh;
+```
+  > gh repo clone c-sanders/ImaginaryNumbers
 ```
 
 * #### Check the status of a local repository
