@@ -2,12 +2,13 @@
 
 
 There are a number of tools which one can use to interact with Git or GitHub. Two of them
-are the Git command line interface (git) and the GitHub command line interface (gh). The 
-git utility allows you to work with both local and remote Git repositories - including Git
+are the Git command line interface (git) and the GitHub command line interface (gh).
+
+The git utility allows you to work with both local and remote Git repositories - including Git
 repositories which are hosted on GitHub. The GitHub command line interface on the other hand,
 is specifically for working with GitHub.
 
-We will refer to both of these command line utilities here in this discussion
+We will refer to both of these command line utilities - git and gh, here in this discussion
 
 #### - Initialise a directory to hold a local copy of a repository
 ```
