@@ -8,7 +8,11 @@ The git utility allows you to work with both local and remote Git repositories -
 repositories which are hosted on GitHub. The GitHub command line interface on the other hand,
 is specifically for working with GitHub.
 
-We will refer to both of these command line utilities - git and gh, here in this discussion
+We will refer to both of these command line utilities - git and gh, here in this discussion.
+
+For more information on the gh command line utility, have a look at the following;
+
+[GitHub CLI quickstart](https://docs.github.com/en/github-cli/github-cli/quickstart)
 
 #### - Initialise a directory to hold a local copy of a repository
 ```
