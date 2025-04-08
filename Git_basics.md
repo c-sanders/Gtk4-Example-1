@@ -1,6 +1,20 @@
 ## Git basics
 
 
+There are a number of tools which one can use to interact with Git or GitHub. Two of them
+are the Git command line interface (git) and the GitHub command line interface (gh).
+
+The git utility allows you to work with both local and remote Git repositories - including Git
+repositories which are hosted on GitHub. The GitHub command line interface on the other hand,
+is specifically for working with GitHub.
+
+We will refer to both of these command line utilities - git and gh, here in this discussion.
+
+For more information on the gh command line utility, have a look at the following;
+
+[GitHub CLI quickstart](https://docs.github.com/en/github-cli/github-cli/quickstart)
+
+
 #### + Get help for Git in general
 ```
   > git help
@@ -44,12 +58,19 @@ gh auth login
 ```
 Two points need to be made about this command.
 
-First, it will present you with a series of interactive questions which you
+1) It will present you with a series of interactive questions which you
 will need to use the keys on your keyboard to answer. As a consequence, the
 terminal which you use to invoke this command will need to be able to
 provide a decent level of functionality.
 
-Second, this command may require access to an ssh key.
+2) This command may require access to an ssh key. If you have an ssh key,
+you might be able to find it in a location such as;
+```
+/home/foo/.ssh/
+or
+C:\Users\Foo\.ssh\
+```
+
 
 #### + Get help for a particular Git command
 ```
