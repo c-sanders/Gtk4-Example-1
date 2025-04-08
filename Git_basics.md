@@ -9,9 +9,9 @@
 
 #### + Providing git with user information about yourself
 
-Before you can issue certain commands from the git CLI, you must provide it with
-some information about yourself. If you don't, then you may be presented with
-the following message. 
+Before you can issue certain commands from the git CLI, you might need to
+provide it with some information about yourself. If you don't, then you may
+be presented with the following message. 
 ```
 Author identity unknown
 
@@ -29,6 +29,27 @@ fatal: unable to auto-detect email address (got 'Craig@Wombat.(none)')
 
 ```
 
+
+#### + Authenticating yourself to GitHub
+
+Before you can perform certain interactions with the GitHub server, you will
+first need to authenticate yourself to it. This can be done in a number of
+different ways; one of which involves the use of https and another which
+involves the use of ssh.
+
+One way in which you can authenticate yourself to the GitHub server, is to
+use the following command;
+```
+gh auth login
+```
+Two points need to be made about this command.
+
+First, it will present you with a series of interactive questions which you
+will need to use the keys on your keyboard to answer. As a consequence, the
+terminal which you use to invoke this command will need to be able to
+provide a decent level of functionality.
+
+Second, this command may require access to an ssh key.
 
 #### + Get help for a particular Git command
 ```
