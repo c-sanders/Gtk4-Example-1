@@ -12,10 +12,8 @@ sudo apt install qtk-base-dev
 
 Using this method, the Qt package may get installed into;
 
-```
-/usr/include/x86_64-linux-gnu/qt6
-/usr/lib/x86_64-linux-gnu/qt6
-```
+> /usr/include/x86_64-linux-gnu/qt6
+> /usr/lib/x86_64-linux-gnu/qt6
 
 
 #### + Downloading Qt from GitHub.
