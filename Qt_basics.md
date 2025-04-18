@@ -1,16 +1,16 @@
 ## Downloading, configuring, and installing Qt on Linux.
 
 
-#### + Using the apt Package Manager.
+#### * Using the apt Package Manager.
 
-In order to get the apt Package Manager to install the Qt package, issue the
-following command from a command line.
+To get the apt Package Manager to install the Qt package, issue the following
+command from a command line.
 
 ```
 sudo apt install qtk-base-dev
 ```
 
-Using this method, the Qt package may get installed into;
+Using this command, the Qt package may get installed into the following locations;
 
 ```
 /usr/include/x86_64-linux-gnu/qt6
