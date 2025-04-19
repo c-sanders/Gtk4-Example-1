@@ -17,6 +17,13 @@ For more information on the gh command line utility, have a look at the followin
 
 [GitHub CLI quickstart](https://docs.github.com/en/github-cli/github-cli/quickstart)
 
+To get help about the git command in general, issue the following command from a
+command line.
+
+```
+  > git help
+```
+
 
 #### > Connecting to GitHub.
 
@@ -28,11 +35,13 @@ There are a number of ways to connect to GitHub.
 > Token
 ```
 
+Since GitHub no longer support connections using https, we won't discuss this
+method here.
+ 
 
-#### > Getting help for Git in general
-```
-  > git help
-```
+#### > Connecting to GitHub using ssh.
+
+
 
 
 #### > Providing git with user information about yourself
@@ -85,6 +94,13 @@ or
 C:\Users\Foo\.ssh\
 ```
 
+> Invoking the gh auth login command.
+
+```
+? Where do you use GitHub?  [Use arrows to move, type to filter]
+> GitHub.com
+  Other
+```
 
 #### + Get help for a particular Git command
 ```
