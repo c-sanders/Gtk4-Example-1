@@ -36,3 +36,8 @@ invoke the following script;
 ```
 ./init-repository
 ```
+
+
+* #### Running cmake on a Qt project.
+
+
