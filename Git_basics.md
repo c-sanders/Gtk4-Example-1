@@ -205,7 +205,9 @@ sub-directory.
 
 With regard to the second example, the user's ssh public key needs to be installed on the GitHub
 server. Also note for the second example, that the user is specified as a generic GitHub user - that
-is `git@github.com`.
+is `git@github.com`. When using this method, git knows about your ssh public key. Therefore, every
+time you try and access GitHub, you shouldn't be asked to provide the passphrase which is associated
+with your ssh public key.
 
 
 #### + Configure a local directory to be a copy of a GitHub repository
