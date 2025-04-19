@@ -176,13 +176,15 @@ This hidden file contains the local version of the Git repository.
 Example using https;
 
 ```
-git clone https://github.com/c-sanders/Gtk4-Example-1.git
+  > cd /home/foo/GitHub
+  > git clone https://github.com/c-sanders/Gtk4-Example-1.git
 ```
 
 Example using ssh;
 
 ```
-git clone git@github.com:c-sanders/Gtk4-Example-1.git
+  > cd /home/foo/GitHub
+  > git clone git@github.com:c-sanders/Gtk4-Example-1.git
 ```
 
 Note that both of these examples will create a sub-directory called ```Gtk4-Example-1``` within
@@ -195,7 +197,9 @@ is `git@github.com`.
 
 
 #### + Configure a local directory to be a copy of a GitHub repository
+
 In order to do this, the sequence of steps below need to be followed. 
+
 ```
   > git init
   > git add README.md
