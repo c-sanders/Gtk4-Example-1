@@ -35,7 +35,7 @@ There are a number of ways to connect to GitHub.
 > Token
 ```
 
-Since GitHub no longer support connections using https, we won't discuss this
+Since GitHub no longer supports connections using https, we won't discuss this
 method here.
  
 
@@ -94,12 +94,32 @@ or
 C:\Users\Foo\.ssh\
 ```
 
-> Invoking the gh auth login command.
+#### > Invoking the gh auth login command.
 
 ```
 ? Where do you use GitHub?  [Use arrows to move, type to filter]
 > GitHub.com
   Other
+
+? What is your preferred protocol for Git operations on this host?  [Use arrows 
+  to move, type to filter]
+  HTTPS
+> SSH
+
+? Upload your SSH public key to your GitHub account?  [Use arrows to move, type
+  to filter]
+> C:\Users\JoeCitizen\.ssh\id_ed25519.pub
+  Skip
+
+? Title for your SSH key: (GitHub CLI)
+
+? How would you like to authenticate GitHub CLI?  [Use arrows to move, type to filter]
+  Login with a web browser
+> Paste an authentication token
+
+Tip: you can generate a Personal Access Token here https://github.com/settings/tokens
+The minimum required scopes are 'repo', 'read:org', 'admin:public_key'.
+? Paste your authentication token: **************************
 ```
 
 #### + Get help for a particular Git command
