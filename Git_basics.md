@@ -52,11 +52,7 @@ Since GitHub no longer supports connections using https, we won't discuss this
 method here.
  
 
-#### > Connecting to GitHub using ssh.
-
-
-
-#### > Authenticating yourself to GitHub.
+#### > Authenticating yourself with GitHub and connecting to it by ssh.
 
 Before you can perform certain interactions with the GitHub server, you will
 first need to authenticate yourself to it. This can be done in a number of
