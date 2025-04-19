@@ -73,8 +73,8 @@ will need to use the keys on your keyboard to answer. As a consequence, the
 terminal which you use to invoke this command will need to be able to
 provide a decent level of functionality.
 
-2) This command may require access to your public ssh key. If you have a public ssh key,
-you might be able to find it in a location such as;
+2) This command may require access to your ssh public key. If you have a public ssh key, then you 
+might be able to find it in a location such as;
 
 ```
 /home/foo/.ssh/
@@ -82,21 +82,21 @@ or
 C:\Users\Foo\.ssh\
 ```
 
-If you don't have one and provided you have the ssh package installed, you should be able to
-generate a public and private key pair by use of the following command;
+If you don't have a ssh public key, then provided you have the ssh package installed, you should be
+able to generate a public and private key pair by use of the following command;
 
 ```
 ssh-keygen -o -t rsa -C "ssh@github.com"
 ```
 
 If all goes well, then this command should place the public and private keys which it generates,
-into your `.ssh` directory.
+into your `.ssh` directory, as was discussed just above.
 
 
 #### > Invoking the script : gh auth login
 
-After you invoke this script from the command line, the first question it will
-ask you is the following.
+After you invoke this script from the command line, the first question it will ask you is the
+following.
 
 ```
 ? Where do you use GitHub?  [Use arrows to move, type to filter]
