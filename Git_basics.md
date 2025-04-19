@@ -81,7 +81,7 @@ or
 C:\Users\Foo\.ssh\
 ```
 
-#### > Invoking the gh auth login command.
+#### > Invoking the script : gh auth login
 
 After you invoke this script from the command line, the first question it will
 ask you is the following.
