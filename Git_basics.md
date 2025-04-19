@@ -24,10 +24,23 @@ command line.
   > git help
 ```
 
+To get help for a particular Git command, issue the following from a command
+line;
+
+```
+  > git <Name of command> -h
+```
+
+Example;
+
+```
+  > git commit -h
+```
+
 
 #### > Connecting to GitHub.
 
-There are a number of ways to connect to GitHub.
+There are a number of ways to connect to GitHub - as opposed to git in general.
 
 ```
 > https
@@ -41,30 +54,6 @@ method here.
 
 #### > Connecting to GitHub using ssh.
 
-
-
-
-#### > Providing git with user information about yourself
-
-Before you can issue certain commands from the git CLI, you might need to
-provide it with some information about yourself. If you don't, then you may
-be presented with the following message. 
-```
-Author identity unknown
-
-*** Please tell me who you are.
-
-Run
-
-  git config --global user.email "you@example.com"
-  git config --global user.name "Your Name"
-
-to set your account's default identity.
-Omit --global to set the identity only in this repository.
-
-fatal: unable to auto-detect email address (got 'Craig@Wombat.(none)')
-
-```
 
 
 #### + Authenticating yourself to GitHub
@@ -108,7 +97,7 @@ C:\Users\Foo\.ssh\
 
 ? Upload your SSH public key to your GitHub account?  [Use arrows to move, type
   to filter]
-> C:\Users\JoeCitizen\.ssh\id_ed25519.pub
+> C:\Users\Foo\.ssh\id_ed25519.pub
   Skip
 
 ? Title for your SSH key: (GitHub CLI)
@@ -119,16 +108,30 @@ C:\Users\Foo\.ssh\
 
 Tip: you can generate a Personal Access Token here https://github.com/settings/tokens
 The minimum required scopes are 'repo', 'read:org', 'admin:public_key'.
-? Paste your authentication token: **************************
+? Paste your authentication token: ghp_isPWhu******************************BbMB3H0Gjq
 ```
 
-#### + Get help for a particular Git command
+
+#### > Providing git with user information about yourself
+
+Before you can issue certain commands from the git CLI, you might need to
+provide it with some information about yourself. If you don't, then you may
+be presented with the following message. 
 ```
-  > git <Name of command> -h
-```
-Example;
-```
-  > git commit -h
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'Craig@Wombat.(none)')
+
 ```
 
 
