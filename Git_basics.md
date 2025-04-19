@@ -1,27 +1,39 @@
-## Git basics
+## Tools for interacting with Git and GitHub.
 
 
-There are a number of tools which one can use to interact with Git or GitHub. Two of them
-are the Git command line interface (git) and the GitHub command line interface (gh).
+There are two tools which can be used to interact with both Git and GitHub. They
+are the Git command line interface (git cli - or more simply git) and the GitHub
+command line interface (gh).
 
-The git utility allows you to work with both local and remote Git repositories - including Git
-repositories which are hosted on GitHub. The GitHub command line interface on the other hand,
-is specifically for working with GitHub.
-
-We will refer to both of these command line utilities - git and gh, here in this discussion.
+The git utility allows you to work with both local and remote Git repositories -
+including Git repositories which are hosted on GitHub. The GitHub command line
+interface on the other hand, is specifically for working with GitHub. We will
+refer to both of these command line utilities - git and gh, here in this
+discussion.
 
 For more information on the gh command line utility, have a look at the following;
 
 [GitHub CLI quickstart](https://docs.github.com/en/github-cli/github-cli/quickstart)
 
 
-#### + Get help for Git in general
+#### > Connecting to GitHub.
+
+There are a number of ways to connect to GitHub.
+
+```
+> https
+> ssh
+> Token
+```
+
+
+#### > Getting help for Git in general
 ```
   > git help
 ```
 
 
-#### + Providing git with user information about yourself
+#### > Providing git with user information about yourself
 
 Before you can issue certain commands from the git CLI, you might need to
 provide it with some information about yourself. If you don't, then you may
