@@ -56,7 +56,7 @@ method here.
 
 
 
-#### + Authenticating yourself to GitHub
+#### > Authenticating yourself to GitHub.
 
 Before you can perform certain interactions with the GitHub server, you will
 first need to authenticate yourself to it. This can be done in a number of
@@ -65,9 +65,11 @@ involves the use of ssh.
 
 One way in which you can authenticate yourself to the GitHub server, is to
 use the following command;
+
 ```
 gh auth login
 ```
+
 Two points need to be made about this command.
 
 1) It will present you with a series of interactive questions for which you
@@ -109,7 +111,8 @@ mentioned above, https is no longer supported by GitHub.
 
 Seeing as we have selected ssh, the script will now ask you if you would like to
 upload your ssh public key to your GitHub account. If you choose to do so, it
-will then ask 
+will then ask you if you want to associate a name or title with this ssh public
+key. 
 
 ```
 ? Upload your SSH public key to your GitHub account?  [Use arrows to move, type
@@ -120,7 +123,7 @@ will then ask
 ? Title for your SSH key: (GitHub CLI)
 ```
 
-
+```
 ? How would you like to authenticate GitHub CLI?  [Use arrows to move, type to filter]
   Login with a web browser
 > Paste an authentication token
