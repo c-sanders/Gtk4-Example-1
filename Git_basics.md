@@ -1,5 +1,7 @@
-## Tools for interacting with Git and GitHub.
+## Git basics.
 
+
+#### > Tools for interacting with git and GitHub.
 
 There are two tools which can be used to interact with both Git and GitHub. They
 are the Git command line interface (git cli - or more simply git) and the GitHub
