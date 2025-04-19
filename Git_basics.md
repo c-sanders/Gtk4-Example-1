@@ -60,7 +60,7 @@ different ways; one of which involves the use of https and another which
 involves the use of ssh.
 
 One way in which you can authenticate yourself to the GitHub server, is to
-use the following command;
+use the following command, which in turn will invoke a script;
 
 ```
 gh auth login
@@ -73,13 +73,25 @@ will need to use the keys on your keyboard to answer. As a consequence, the
 terminal which you use to invoke this command will need to be able to
 provide a decent level of functionality.
 
-2) This command may require access to an ssh key. If you have an ssh key,
+2) This command may require access to your public ssh key. If you have a public ssh key,
 you might be able to find it in a location such as;
+
 ```
 /home/foo/.ssh/
 or
 C:\Users\Foo\.ssh\
 ```
+
+If you don't have one and provided you have the ssh package installed, you should be able to
+generate a public and private key pair by use of the following command;
+
+```
+ssh-keygen -o -t rsa -C "ssh@github.com"
+```
+
+If all goes well, then this command should place the public and private keys which it generates,
+into your `.ssh` directory.
+
 
 #### > Invoking the script : gh auth login
 
