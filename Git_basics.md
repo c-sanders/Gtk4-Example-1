@@ -130,8 +130,8 @@ The minimum required scopes are 'repo', 'read:org', 'admin:public_key'.
 
 - gh config set -h github.com git_protocol ssh
 ? Configured git protocol
-? SSH key already existed on your GitHub account: C:\Users\Craig\.ssh\id_ed25519.pub
-? Logged in as c-sanders
+? SSH key already existed on your GitHub account: C:\Users\Foo\.ssh\id_ed25519.pub
+? Logged in as foo
 ! You were already logged in to this account
 ```
 
@@ -167,17 +167,31 @@ fatal: unable to auto-detect email address (got 'Craig@Wombat.(none)')
 This will create a hidden file called ```.git``` in the directory from which this command was invoked.
 This hidden file contains the local version of the Git repository.
 
-#### + Clone a remote repository into a local directory
+#### > Clone a remote repository into a local directory
+
 ```
   > git clone <URI of remote repository>
 ```
-Example;
+
+Example using https;
+
 ```
-  > git clone https://github.com/c-sanders/Gtk4-Example-1.git
+git clone https://github.com/c-sanders/Gtk4-Example-1.git
 ```
-Note that this will create a sub-directory called ```Gtk4-Example-1``` within
-the current working directory and then clone the contents of the remote
-repository into this sub-directory.  
+
+Example using ssh;
+
+```
+git clone git@github.com:c-sanders/Gtk4-Example-1.git
+```
+
+Note that both of these examples will create a sub-directory called ```Gtk4-Example-1``` within
+the current working directory and then clone the contents of the remote repository into this
+sub-directory.
+
+With regard to the second example, the user's ssh public key needs to be installed on the GitHub
+server. Also note for the second example, that the user is specified as a generic GitHub user - that
+is `git@github.com`.
 
 
 #### + Configure a local directory to be a copy of a GitHub repository
