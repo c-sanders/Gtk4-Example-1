@@ -70,7 +70,7 @@ gh auth login
 ```
 Two points need to be made about this command.
 
-1) It will present you with a series of interactive questions which you
+1) It will present you with a series of interactive questions for which you
 will need to use the keys on your keyboard to answer. As a consequence, the
 terminal which you use to invoke this command will need to be able to
 provide a decent level of functionality.
@@ -85,22 +85,41 @@ C:\Users\Foo\.ssh\
 
 #### > Invoking the gh auth login command.
 
+After you invoke this script from the command line, the first question it will
+ask you is the following.
+
 ```
 ? Where do you use GitHub?  [Use arrows to move, type to filter]
 > GitHub.com
   Other
+```
 
+Move the arrow keys on the keyboard to select your answer.
+
+The next question it will ask you is about the method you would like to use to
+access GitHub. In my case, I prefer to use ssh (Secure SHell), since - as we 
+mentioned above, https is no longer supported by GitHub.
+
+```
 ? What is your preferred protocol for Git operations on this host?  [Use arrows 
   to move, type to filter]
   HTTPS
 > SSH
+```
 
+Seeing as we have selected ssh, the script will now ask you if you would like to
+upload your ssh public key to your GitHub account. If you choose to do so, it
+will then ask 
+
+```
 ? Upload your SSH public key to your GitHub account?  [Use arrows to move, type
   to filter]
 > C:\Users\Foo\.ssh\id_ed25519.pub
   Skip
 
 ? Title for your SSH key: (GitHub CLI)
+```
+
 
 ? How would you like to authenticate GitHub CLI?  [Use arrows to move, type to filter]
   Login with a web browser
@@ -109,6 +128,12 @@ C:\Users\Foo\.ssh\
 Tip: you can generate a Personal Access Token here https://github.com/settings/tokens
 The minimum required scopes are 'repo', 'read:org', 'admin:public_key'.
 ? Paste your authentication token: ghp_isPWhu******************************BbMB3H0Gjq
+
+- gh config set -h github.com git_protocol ssh
+? Configured git protocol
+? SSH key already existed on your GitHub account: C:\Users\Craig\.ssh\id_ed25519.pub
+? Logged in as c-sanders
+! You were already logged in to this account
 ```
 
 
