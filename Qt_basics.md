@@ -40,8 +40,8 @@ invoke the following script;
 
 #### > Running cmake on a Qt project.
 
-cd into the directory which contains the `CMakeLists.txt` file. Then, from within that
-directory, issue the following command;
+To get a feel for what the `cmake` utility can do, issue the following command from a
+command line terminal;
 
 ```
 cmake --help
@@ -204,3 +204,14 @@ The following generators are available on this platform (* marks default):
                                = Generates Sublime Text 2 project files
                                  (deprecated).
 ```
+
+From this, we can see that if cd into our desired build directory and then issue
+a command which is similar to the following;
+
+```
+cmake <src_dir>
+```
+
+where `<src_dir>` denotes the directory which the package's source code resides in.
+
+
