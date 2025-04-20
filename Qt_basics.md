@@ -205,13 +205,15 @@ The following generators are available on this platform (* marks default):
                                  (deprecated).
 ```
 
-From this, we can see that if cd into our desired build directory and then issue
+From this, we can see that if we cd into our desired build directory and then issue
 a command which is similar to the following;
 
 ```
 cmake <src_dir>
 ```
 
-where `<src_dir>` denotes the directory which the package's source code resides in.
+then cmake should generate build files for the package, in our desired build directory.
 
-
+It is worth noting that `<src_dir>` denotes the directory which the package's source code resides in.
+Furthermore, this directory can be completely diffrent from the build directory which cmake will put the
+build files into.
