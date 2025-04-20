@@ -38,7 +38,7 @@ invoke the following script;
 ```
 
 
-#### > Running cmake on a Qt project.
+#### > The cmake utility.
 
 To get a feel for what the `cmake` utility can do, issue the following command from a
 command line terminal;
@@ -205,15 +205,89 @@ The following generators are available on this platform (* marks default):
                                  (deprecated).
 ```
 
-From this, we can see that if we cd into our desired build directory and then issue
+From this, we can see that if one were to cd into the desired build directory and then issue
 a command which is similar to the following;
 
 ```
 cmake <src_dir>
 ```
 
-then cmake should generate build files for the package, in our desired build directory.
+then cmake should generate build files for the package and install them into the current working directory,
+i.e. the desired build directory.
 
-It is worth noting that `<src_dir>` denotes the directory which the package's source code resides in.
+It is worth noting that `<src_dir>` denotes the directory which the package's source code resides in. This
+directory should also contain a file called `CMakeLists.txt`. This is the file which the `cmake` utility
+will take its instructions from, when it comes to generating the build files.
+
 Furthermore, this directory can be completely diffrent from the build directory which cmake will put the
 build files into.
+
+
+#### > cmake project files - CMakeLists.txt
+
+Shown below is an example of a `CMakeLists.txt` file.
+
+```
+cmake_minimum_required(
+
+ VERSION
+     3.16
+)
+
+project(
+
+ QtExample 
+ VERSION
+     1.0.0
+ LANGUAGES
+     CXX
+)
+
+set(
+
+ CMAKE_CXX_STANDARD
+ 17
+)
+
+set(
+
+ CMAKE_CXX_STANDARD_REQUIRED 
+ ON
+)
+
+set(
+
+ CMAKE_MODULE_PATH
+
+)
+
+# Find particular packages.
+
+find_package(
+
+ Qt6
+ REQUIRED COMPONENTS
+     Core
+     Widgets
+)
+
+qt_standard_project_setup()
+
+qt_add_executable(
+
+ QtExample1
+ QtExample1.cpp
+ CSMainWindow.cpp
+)
+
+target_link_libraries(
+
+ QtExample1
+ PRIVATE 
+     Qt6::Core 
+     Qt6::Widgets
+)
+```
+
+Apart from being used to generate build files, `CMakeLists.txt` files can also be loaded in the Qt Creator
+IDE, effectively as a project file.
