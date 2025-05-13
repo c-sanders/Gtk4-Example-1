@@ -32,7 +32,7 @@ Drives:
 
 From this output, we can see that I have two optical drives available on my
 system - ```/dev/sr0``` and ```/dev/sr1```. After undertaking some research
-on the Internet, I discovered that ```/dev/sr0`` is a Hewlett Packard
+on the Internet, I discovered that ```/dev/sr0``` is a Hewlett Packard
 brand optical drive, while ```/dev/sr1``` is an LG brand optical drive.
 
 https://h10032.www1.hp.com/ctg/Manual/c02642918.pdf
