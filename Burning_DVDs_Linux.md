@@ -38,6 +38,9 @@ brand optical drive, while ```/dev/sr1``` is an LG brand optical drive.
 For more information on the Hewlett Packard GH80N optical drive, have a 
 look [here](https://h10032.www1.hp.com/ctg/Manual/c02642918.pdf).
 
+For more information on the LG GH22NS50 optical drive, have a look
+[here](https://www.lg.com/au/support/product-support/cs-GH22NS50/).
+
 
 #### > Using the ```wodim``` command line utility to find the optical drives on your system
 
@@ -129,3 +132,21 @@ Supported CD-RW media types according to MMC-4 feature 0x37:
   Does write ultra high speed  CD-RW media
   Does write ultra high speed+ CD-RW media
 ```
+
+
+#### > Using the ```wodim``` command line utility to burn an ISO image to a DVD.
+
+The ```wodim``` command line utility can also be used to burn data to a 
+DVD.
+
+To burn an ISO image to blank DVD, a command similar to the following
+can be used;
+
+```
+wodim -v -tao speed=2 dev=/dev/sr1 -data ./Win11_24H2_EnglishInternational_x64.iso 
+
+```
+
+```-v``` : Operate in a verbose manner.
+```-tao``` : Burn the data in 'Track At Once' mode.
+```speed=2``` : 
