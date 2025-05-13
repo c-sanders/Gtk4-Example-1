@@ -139,7 +139,7 @@ Supported CD-RW media types according to MMC-4 feature 0x37:
 The ```wodim``` command line utility can also be used to burn data to a 
 DVD.
 
-To burn an ISO image to blank DVD, a command similar to the following
+To burn an ISO image to a blank DVD, a command similar to the following
 can be used;
 
 ```
@@ -148,5 +148,7 @@ wodim -v -tao speed=2 dev=/dev/sr1 -data ./Win11_24H2_EnglishInternational_x64.i
 ```
 
 ```-v``` : Operate in a verbose manner.
+
 ```-tao``` : Burn the data in 'Track At Once' mode.
+
 ```speed=2``` : 
