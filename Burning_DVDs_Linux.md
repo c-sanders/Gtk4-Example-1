@@ -9,7 +9,7 @@ One way to find if there are any optical drives on your Linux system, is to use 
 For example;
 
 ```
-  > inxi -d
+> inxi -d
 ```
 
 Running this command on my system yields the following information;
@@ -35,7 +35,8 @@ system - ```/dev/sr0``` and ```/dev/sr1```. After undertaking some research
 on the Internet, I discovered that ```/dev/sr0``` is a Hewlett Packard
 brand optical drive, while ```/dev/sr1``` is an LG brand optical drive.
 
-https://h10032.www1.hp.com/ctg/Manual/c02642918.pdf
+For more information on the Hewlett Packard GH80N optical drive, have a 
+look [here](https://h10032.www1.hp.com/ctg/Manual/c02642918.pdf).
 
 
 #### > Using the ```wodim``` command line utility to find the optical drives on your system
@@ -46,7 +47,7 @@ to use the ```wodim``` command line utility.
 For example;
 
 ```
-wodim -prcap
+> wodim -prcap
 ```
 
 Running this command on my system yields the following information;
