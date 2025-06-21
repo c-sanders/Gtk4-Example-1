@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+  <body>
+    <pre class="mermaid">
+
+---
+config:
+  theme : 'base'
+  themeVariables :
+    primaryColor       : 'gainsboro'
+    primaryTextColor   : 'black'
+    primaryBorderColor : 'midgrey'
+    lineColor          : 'grey'
+    secondaryColor     : 'gainsboro'
+    tertiaryColor      : 'lightblue'
+---
+
+sequenceDiagram
+
+	participant A as GUI_yt_dlp
+    	participant B as mainWindow : MyMainWindow
+        participant C as mainWindow::createGuiControls
+        participant D as mainWindow::setupGuiControls
+
+        participant AA as configHandler : ConfigHandler
+        participant AB as configHandler::getConfigFromFile
+
+        A-->>B  : create
+        activate B
+        A-->>AA : create
+        activate AA
+        A->>B  : setupUi()
+        B->>C  : createGuiControls()
+        activate C
+	C--)B : return()
+        deactivate C
+        B->>D  : setupGuiControls()
+        activate D
+        D->>AB : getConfigFromFile()
+        activate AB
+        AB--)D : return()
+        deactivate AB
+        D--)B : return()
+        deactivate D
+        A--xAA : destroy
+        deactivate AA
+        A--xB  : destroy
+        deactivate B;
+    </pre>    
+    <script type="module">
+      import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    </script>
+
+    <script>
+       mermaid.run({ startOnLoad: true });
+     </script>
+
+  </body>
+</html>
