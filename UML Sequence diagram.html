@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <body>
+    <pre class="mermaid">
+
+sequenceDiagram
+
+    participant A as GUI_yt_dlp
+
+    box AliceBlue Object : mainWindow
+
+    	participant mainWindow            as mainWindow : MyMainWindow
+    	participant setupUI               as mainWindow::setupUI
+
+        participant setupMainWidget       as mainWindow::__setupMainWidget
+
+        participant createMenubar         as mainWindow::__createMenubar
+        participant setupCentralPane      as mainWindow::__setupCentralPane
+
+        participant setupUrlPane          as mainWindow::__setupUrlPane
+        participant setupConfigPane       as mainWindow::__setupConfigPane
+
+        participant connectSignalsToSlots as mainWindow::__connectSignalsToSlots
+        participant D as mainWindow::setupGuiControls
+        participant E as mainWindow::setupMainWindow
+        participant F as mainWindow::setupTabbedWidget
+
+    end
+
+    box HoneyDew Object : configHandler
+
+        participant AA as configHandler : ConfigHandler
+        participant AB as configHandler::getConfigFromFile
+
+    end
+
+        % 
+
+        A-->>mainWindow  : create
+        activate mainWindow
+        A-->>AA : create
+        activate AA
+        A->>setupUI  : setupUI()
+        activate setupUI
+        setupUI->>setupMainWidget  : self.__setupMainWidget()
+        activate setupMainWidget
+
+        setupMainWidget->>createMenubar : self.__createMenubar()        
+        activate createMenubar        
+        createMenubar--)setupMainWidget : return()
+        deactivate createMenubar
+
+        setupMainWidget->>setupCentralPane : self.__setupCentralPane()        
+        activate setupCentralPane
+
+        setupCentralPane->>setupUrlPane : self.__setupUrlPane()        
+        activate setupUrlPane
+        setupUrlPane--)setupCentralPane : return()
+        deactivate setupUrlPane
+
+        setupCentralPane->>setupConfigPane : self.__setupConfigPane()        
+        activate setupConfigPane
+        setupConfigPane--)setupCentralPane : return()
+        deactivate setupConfigPane
+
+        setupCentralPane--)setupMainWidget : return()
+        deactivate setupCentralPane
+
+	setupMainWidget--)setupUI : return()
+        deactivate setupMainWidget
+        setupUI->>connectSignalsToSlots : self.__connectSignalsToSlots()
+        activate connectSignalsToSlots
+        connectSignalsToSlots--)setupUI : return()
+        deactivate connectSignalsToSlots
+	setupUI--)A : return()
+        deactivate setupUI
+        mainWindow->>D  : setupGuiControls()
+        activate D
+        D-->>E : setupMainWindow()
+        activate E
+        D--)E  : return()
+        deactivate E
+        D-->>F : setupTabbedWidget()
+        activate F 
+        D--)F  : return()
+        deactivate F
+        D->>AB : getConfigFromFile()
+        activate AB
+        AB--)D : return()
+        deactivate AB
+        D--)mainWindow : return()
+        deactivate D
+        A--xAA : destroy
+        deactivate AA
+        A--xmainWindow  : destroy
+        deactivate mainWindow;
+    </pre>    
+    <script type="module">
+        import mermaid from 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.esm.min.mjs';
+    </script>
+
+    <script>
+        mermaid.run({ startOnLoad: true });
+    </script>
+
+  </body>
+</html>
